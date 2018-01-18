@@ -25,6 +25,7 @@ def win_to_ts(t1, t2, ts=None):
     eff = make_bxcar(t2-t1)
     ts[t1:t2] += eff
     return ts
+    
 spatial_patterns = [
     np.array([0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]),
     np.array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1])]
@@ -112,9 +113,7 @@ for ii, name in enumerate(names):
             
         gat_scores[this_win, :] = np.asarray([est.score(X2[:, tp * 10, :],
                                                         y).mean() for tp in range(100)])
-    
-    
-    
+ 
     if ax_decoding.is_last_col():
         ax_gats.imshow(gat_scores.T, origin="lower", cmap="RdBu_r", vmax=1, vmin=0,
                    extent=(0, 1, 0, 1))
