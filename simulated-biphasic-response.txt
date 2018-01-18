@@ -16,8 +16,8 @@ sns.set_context("notebook")
 
 def make_bxcar(l=200):
     l /= 2
-    s = np.sin(np.linspace(0, np.pi, l))
-    b = np.ones(l + 1)
+    s = np.sin(np.linspace(0, np.pi, int(l)))
+    b = np.ones(int(l) + 1)
     return minmax_scale(np.convolve(s, b))
 def win_to_ts(t1, t2, ts=None):
     if ts is None:
@@ -95,7 +95,7 @@ for ii, name in enumerate(names):
         ax_erp.set_ylabel("Difference ERP\n\n(Violation - Baseline)")
     for this_win, label in zip(wins,
                                ["process 1", "process 2"]):
-        comp = np.mean(this_win)
+        comp = int(np.mean(this_win))
         lda = LDA().fit(X[:, comp, :], y)
         scores = [lda.score(X[:, tp, :], y).mean() for tp in range(X.shape[1])]
         ax_decoding.plot(scores, label=label)
