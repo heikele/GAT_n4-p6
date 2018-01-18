@@ -1,3 +1,5 @@
+# Simulated neural architecture for biphasic response if underlying activity is serial, cascading or latency shifted
+
 %matplotlib inline
 import numpy as np
 import scipy
