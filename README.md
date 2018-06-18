@@ -1,6 +1,6 @@
 # N400-P600 GAT Decoding of semantic anomalies using EEG
 
-data is accessible from https://zenodo.org/deposit/1185944 or by going to releases in this repository
+Data is accessible from https://zenodo.org/record/1185944#.Wye6JC-Q1TY 
 
 ### preprocessing-ICA-Autoreject: 
  script for preprocessing the recorded subject vhdr files, correcting for ICA and auto-rejection and repair
