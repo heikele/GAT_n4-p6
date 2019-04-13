@@ -24,7 +24,7 @@ Data is accessible from https://zenodo.org/record/1185944#.Wye6JC-Q1TY
 
 ### MVPA: 
  Script for MVPA analysis:
-- creates machine learning pipeline (works for Ridge Classifier, Logistic Regression, linear SVM, and non-linear (RBF) SVM).
+- creates machine learning pipeline (works for Ridge Classifier, Logistic Regression, linear and non-linear (RBF) SVM).
 - investigates how well patterns from 300-500ms (N400) and 600-800ms (P600) generalize over time.
 
  Plot the MVPA results in a figure with 4 subplots:
